@@ -1,0 +1,30 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "selenium:test": "jest --config ./jest.config.json",
+    "testcafe:chrome": "testcafe chrome testcafe.js --skip-uncaught-errors --skip-js-errors",
+    "cypress:test": "cypress run "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "^1.15.0"
+  },
+  "devDependencies": {
+    "chromedriver": "^91.0.1",
+    "cypress": "^7.7.0",
+    "jest": "^27.0.6",
+    "jest-environment-webdriver": "^0.2.0",
+    "selenium-webdriver": "^4.0.0-beta.4"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-webdriver",
+    "testEnvironmentOptions": {
+      "browser": "chrome"
+    }
+  }
+}
