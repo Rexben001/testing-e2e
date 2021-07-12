@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "selenium:test": "jest --config ./jest.config.json",
-    "testcafe:chrome": "testcafe chrome testcafe.js --skip-uncaught-errors --skip-js-errors",
+    "testcafe:chrome": "testcafe --hostname localhost 'chrome --use-fake-ui-for-media-stream --use-fake-device-for-media-stream' testcafe.js --skip-js-errors --debug-on-fail",
+    "testcafe:safari": "testcafe safari testcafe.js --skip-uncaught-errors --skip-js-errors --debug-on-fail",
     "cypress:test": "cypress run "
   },
   "keywords": [],

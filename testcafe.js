@@ -15,15 +15,12 @@ fixture`Main App`.page`https://localhost:3000/login`;
 
 test('Login page', async t => {
     // Test code
-
-    await t.expect(Selector('h3').innerText).eql('Welcome to Readeo');
-
     await t
         .typeText('input[name="email"]', 'EMAIL')
         .typeText('input[name="password"]', 'PASSWORD')
         .click('button[type="submit"]')
         .click('button[aria-label="Close"]')
-        .wait(500)
-        .expect(Selector('div[data-testid="NAV_MENU_DESKTOP"] > a:first-child > div').innerText).eql('library');
+        .wait(1000)
+        .expect(Selector('div[data-testid="NAV_MENU_DESKTOP"] > a:first-child > div').innerText).eql('LIBRARY');
 
 });
